@@ -31,7 +31,9 @@ while IFS= read -r line; do IFS=',' read -r task_name task_path task_reqs <<< "$
   # match the task with the task entry in the cache
   for valid_task in ${valid_tasks[@]}; do
 
-    if [[ $valid_task != $task_name ]]; then continue fi
+    if [[ $valid_task != $task_name ]]; then
+      continue
+    fi
 
     # Environment Variables
     if [[ -e "$(dirname "$task_path")"/.env ]]; then
