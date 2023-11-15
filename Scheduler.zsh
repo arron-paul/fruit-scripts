@@ -8,6 +8,8 @@ source "$BASE_DIR/Scheduler/Functions.zsh"
 source "$BASE_DIR/Scheduler/Cache.zsh"
 source "$BASE_DIR/Scheduler/Arguments.zsh"
 
+echo hi
+
 validate_cache "$TASKS_DIR"
 validate_arguments $@
 
